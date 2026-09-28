@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gizlilik Politikası</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:#182235;font:17px/1.7 system-ui,sans-serif}
+main{max-width:850px;margin:40px auto;padding:32px;background:white;border:1px solid #dce3ed;border-radius:18px}
+nav{display:flex;justify-content:flex-end;gap:10px;margin-bottom:24px}nav a{padding:8px 16px;border:1px solid #bbc8da;border-radius:8px;color:#164aa5;text-decoration:none}
+nav a[aria-current="true"]{background:#164aa5;color:white}a:focus-visible{outline:3px solid #f0a820;outline-offset:3px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.2}h2{font-size:22px}.app{font-weight:650}.date{color:#56657a;font-size:14px}li{margin-bottom:10px}p,li{overflow-wrap:anywhere}[hidden]{display:none!important}
+@media(max-width:600px){main{margin:12px;padding:20px}nav{justify-content:center}}
+</style></head><body><main><nav aria-label="Dil seçimi"><a href="#tr" lang="tr" data-lang="tr">Türkçe</a><a href="#en" lang="en" data-lang="en">English</a></nav>
+<article id="policy-tr" lang="tr"><h1>Gizlilik Politikası</h1><p class="app">Ramcosan-Site-Ban</p><p class="date">Son güncelleme: 2026-09-28</p><p><strong>Ramcosan-Site-Ban</strong> hiçbir kişisel veriyi dış sunuculara <strong>göndermez</strong>, toplamaz veya saklamaz.</p>
+<ul><li>Ayarlar, listeler, istatistikler ve tercihler <strong>yalnızca cihazınızda</strong> saklanır (örneğin <code>chrome.storage.local</code> veya yerel uygulama verisi).</li><li>Hiçbir sunucuya, üçüncü taraf hizmete, analitik sağlayıcıya veya reklam ağına veri iletilmez.</li><li>Uzaktan takip çerezi veya analitik için parmak izi kullanılmaz.</li><li>Uzantıyı/uygulamayı kaldırarak veya yerleşik sıfırlama / yedek özelliklerini kullanarak tüm verileri istediğiniz zaman silebilirsiniz.</li></ul>
+<p>Kullanıcı verisi satılmaz, paylaşılmaz veya aktarılmaz çünkü hiçbir veri alınmaz.</p>
+<ul><li>Depo sahibi: Ramcosan</li></ul></article>
+<article id="policy-en" lang="en" hidden><h1>Privacy Policy</h1><p class="app">Ramcosan-Site-Ban</p><p class="date">Last updated: 2026-09-28</p><p><strong>Ramcosan-Site-Ban</strong> does <strong>not</strong> collect, store, or transmit personal data to external servers.</p>
+<ul><li>All settings, lists, statistics and user preferences are stored <strong>only locally</strong> on your device (for example <code>chrome.storage.local</code> or local application data).</li><li>No data is sent to any server, third-party service, analytics provider or advertising network.</li><li>The extension / application does not use remote tracking cookies or fingerprinting for analytics.</li><li>You can clear all data at any time by removing the extension/app or using its built-in reset / backup features.</li></ul>
+<p>We do not sell, share or transfer user data because we never receive it.</p>
+<ul><li>Repository owner: Ramcosan</li></ul></article>
+</main><script>
+(function(){
+const titles={tr:'Gizlilik Politikası',en:'Privacy Policy'};
+function choose(){
+const code=location.hash==='#en'?'en':location.hash==='#tr'?'tr':'tr';
+document.documentElement.lang=code;document.title=titles[code];
+document.querySelector('nav').setAttribute('aria-label',code==='tr'?'Dil seçimi':'Language selection');
+document.querySelectorAll('article').forEach(el=>el.hidden=el.lang!==code);
+document.querySelectorAll('[data-lang]').forEach(el=>el.setAttribute('aria-current',String(el.dataset.lang===code)));
+}
+window.addEventListener('hashchange',choose);choose();
+})();
+</script></body></html>
