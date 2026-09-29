@@ -7,20 +7,39 @@ nav{display:flex;justify-content:flex-end;gap:10px;margin-bottom:24px}nav a{padd
 nav a[aria-current="true"]{background:#164aa5;color:white}a:focus-visible{outline:3px solid #f0a820;outline-offset:3px}
 h1{font-size:clamp(26px,5vw,38px);line-height:1.2}h2{font-size:22px}.app{font-weight:650}.date{color:#56657a;font-size:14px}li{margin-bottom:10px}p,li{overflow-wrap:anywhere}[hidden]{display:none!important}
 @media(max-width:600px){main{margin:12px;padding:20px}nav{justify-content:center}}
-</style></head><body><main><nav aria-label="Dil seçimi"><a href="#tr" lang="tr" data-lang="tr">Türkçe</a><a href="#en" lang="en" data-lang="en">English</a></nav>
-<article id="policy-tr" lang="tr"><h1>Gizlilik Politikası</h1><p class="app">Ramcosan-Site-Ban</p><p class="date">Son güncelleme: 2026-09-28</p><p><strong>Ramcosan-Site-Ban</strong> hiçbir kişisel veriyi dış sunuculara <strong>göndermez</strong>, toplamaz veya saklamaz.</p>
-<ul><li>Ayarlar, listeler, istatistikler ve tercihler <strong>yalnızca cihazınızda</strong> saklanır (örneğin <code>chrome.storage.local</code> veya yerel uygulama verisi).</li><li>Hiçbir sunucuya, üçüncü taraf hizmete, analitik sağlayıcıya veya reklam ağına veri iletilmez.</li><li>Uzaktan takip çerezi veya analitik için parmak izi kullanılmaz.</li><li>Uzantıyı/uygulamayı kaldırarak veya yerleşik sıfırlama / yedek özelliklerini kullanarak tüm verileri istediğiniz zaman silebilirsiniz.</li></ul>
+</style></head><body><main><nav aria-label="Dil seçimi"><a id="home-link" href="index.html#tr">Ana sayfa</a><a href="#tr" lang="tr" data-lang="tr">Türkçe</a><a href="#en" lang="en" data-lang="en">English</a></nav>
+<article id="policy-tr" lang="tr"><h1>Gizlilik Politikası</h1><p class="app">Ramcosan-Site-Ban</p><p class="date">Son güncelleme: 2026-09-29</p><h3>Uygulama verileri</h3>
+<p><strong>Ramcosan-Site-Ban</strong> hiçbir kişisel veriyi dış sunuculara <strong>göndermez</strong>, toplamaz veya saklamaz.</p>
+<ul>
+<li>Ayarlar, listeler, istatistikler ve tercihler <strong>yalnızca cihazınızda</strong> saklanır (örneğin <code>chrome.storage.local</code> veya yerel uygulama verisi).</li>
+<li>Hiçbir sunucuya, üçüncü taraf hizmete, analitik sağlayıcıya veya reklam ağına veri iletilmez.</li>
+<li>Uzaktan takip çerezi veya analitik için parmak izi kullanılmaz.</li>
+<li>Uzantıyı/uygulamayı kaldırarak veya yerleşik sıfırlama / yedek özelliklerini kullanarak tüm verileri istediğiniz zaman silebilirsiniz.</li>
+</ul>
 <p>Kullanıcı verisi satılmaz, paylaşılmaz veya aktarılmaz çünkü hiçbir veri alınmaz.</p>
-<ul><li>Depo sahibi: Ramcosan</li></ul></article>
-<article id="policy-en" lang="en" hidden><h1>Privacy Policy</h1><p class="app">Ramcosan-Site-Ban</p><p class="date">Last updated: 2026-09-28</p><p><strong>Ramcosan-Site-Ban</strong> does <strong>not</strong> collect, store, or transmit personal data to external servers.</p>
-<ul><li>All settings, lists, statistics and user preferences are stored <strong>only locally</strong> on your device (for example <code>chrome.storage.local</code> or local application data).</li><li>No data is sent to any server, third-party service, analytics provider or advertising network.</li><li>The extension / application does not use remote tracking cookies or fingerprinting for analytics.</li><li>You can clear all data at any time by removing the extension/app or using its built-in reset / backup features.</li></ul>
+<ul>
+<li>Depo sahibi: Ramcosan</li>
+</ul><h2>Ek bilgiler</h2><p>Tanıtım web sitesi: İzin verdiğinizde Google Analytics ziyaret ve kullanım istatistikleri için Google&#x27;a veri gönderir ve analiz çerezleri kullanabilir. Reddederseniz Google etiketi yüklenmez. Tercihinizi sayfanın altındaki Analiz tercihleri düğmesinden değiştirebilirsiniz. Bu bölüm web sitesini, yukarıdaki açıklamalar uygulamayı kapsar.</p></article>
+<article id="policy-en" lang="en" hidden><h1>Privacy Policy</h1><p class="app">Ramcosan-Site-Ban</p><p class="date">Last updated: 2026-09-29</p><h3>Application data</h3>
+<p><strong>Ramcosan-Site-Ban</strong> does <strong>not</strong> collect, store, or transmit personal data to external servers.</p>
+<ul>
+<li>All settings, lists, statistics and user preferences are stored <strong>only locally</strong> on your device (for example <code>chrome.storage.local</code> or local application data).</li>
+<li>No data is sent to any server, third-party service, analytics provider or advertising network.</li>
+<li>The extension / application does not use remote tracking cookies or fingerprinting for analytics.</li>
+<li>You can clear all data at any time by removing the extension/app or using its built-in reset / backup features.</li>
+</ul>
 <p>We do not sell, share or transfer user data because we never receive it.</p>
-<ul><li>Repository owner: Ramcosan</li></ul></article>
+<ul>
+<li>Repository owner: Ramcosan</li>
+</ul><h2>Additional information</h2><p>Promotional website: With your permission, Google Analytics sends visit and usage data to Google and may use analytics cookies. If you decline, the Google tag is not loaded. Change your choice using Analytics preferences at the bottom of the page. This section covers the website; the statements above cover the application.</p></article>
 </main><script>
 (function(){
 const titles={tr:'Gizlilik Politikası',en:'Privacy Policy'};
 function choose(){
-const code=location.hash==='#en'?'en':location.hash==='#tr'?'tr':'tr';
+let saved='';try{saved=sessionStorage.getItem('site-language')||''}catch(e){}
+const code=location.hash==='#en'?'en':location.hash==='#tr'?'tr':(['en','tr'].includes(saved)?saved:'tr');
+try{sessionStorage.setItem('site-language',code)}catch(e){}
+const home=document.getElementById('home-link');home.href='index.html#'+code;home.textContent=code==='tr'?'Ana sayfa':'Home';
 document.documentElement.lang=code;document.title=titles[code];
 document.querySelector('nav').setAttribute('aria-label',code==='tr'?'Dil seçimi':'Language selection');
 document.querySelectorAll('article').forEach(el=>el.hidden=el.lang!==code);
@@ -28,4 +47,27 @@ document.querySelectorAll('[data-lang]').forEach(el=>el.setAttribute('aria-curre
 }
 window.addEventListener('hashchange',choose);choose();
 })();
-</script></body></html>
+</script>
+<style>#analytics-choice{position:fixed;bottom:16px;left:16px;right:16px;z-index:9999;background:#111827;color:#fff;border:1px solid #64748b;border-radius:12px;padding:16px;box-shadow:0 8px 30px #0005;font:15px/1.5 system-ui}#analytics-choice button,#analytics-settings{padding:8px 12px;border:1px solid #64748b;border-radius:8px;background:#fff;color:#111827;cursor:pointer;margin:4px}#analytics-settings{position:fixed;bottom:4px;right:4px;z-index:9998}</style>
+<div id="analytics-choice" hidden><p id="analytics-message"></p><button id="analytics-yes"></button><button id="analytics-no"></button><a id="analytics-policy" style="color:#93c5fd"></a></div><button id="analytics-settings"></button>
+<script>
+(function(){
+const id='G-35ZFN346K2', key='analytics-choice:'+id+':'+location.pathname.replace(/[^/]*$/,'');
+const box=document.getElementById('analytics-choice');let loaded=false;
+function text(){let tr=document.documentElement.lang==='tr';
+document.getElementById('analytics-message').textContent=tr?'İzin verirseniz ziyaret istatistikleri için Google Analytics kullanılır.':'With your permission, Google Analytics is used for visitor statistics.';
+document.getElementById('analytics-yes').textContent=tr?'İzin ver':'Allow';document.getElementById('analytics-no').textContent=tr?'Reddet':'Decline';
+document.getElementById('analytics-settings').textContent=tr?'Analiz tercihleri':'Analytics preferences';
+const link=document.getElementById('analytics-policy');link.textContent=tr?'Gizlilik politikası':'Privacy policy';link.href='privacy-policy.html#'+(tr?'tr':'en');}
+function start(){if(loaded)return;loaded=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};
+gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+gtag('js',new Date());gtag('config',id,{allow_google_signals:false,allow_ad_personalization_signals:false});
+const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(script);}
+let choice='';try{choice=localStorage.getItem(key)||''}catch(e){}
+if(choice==='yes')start();else if(choice!=='no')box.hidden=false;
+function save(value){try{localStorage.setItem(key,value)}catch(e){}box.hidden=true;if(value==='yes'){window['ga-disable-'+id]=false;start()}else if(loaded){window['ga-disable-'+id]=true;gtag('consent','update',{analytics_storage:'denied'});location.reload()}}
+document.getElementById('analytics-yes').onclick=()=>save('yes');document.getElementById('analytics-no').onclick=()=>save('no');document.getElementById('analytics-settings').onclick=()=>{box.hidden=false};
+new MutationObserver(text).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});text();
+})();
+</script>
+</body></html>
